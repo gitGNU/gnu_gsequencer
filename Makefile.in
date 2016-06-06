@@ -14,6 +14,11 @@
 
 @SET_MAKE@
 
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
 
 
 
@@ -1212,9 +1217,10 @@ AM_CPPFLAGS = -include /usr/include/errno.h -I$(top_srcdir) -DDESTDIR=\"$(DESTDI
 lib_LTLIBRARIES = libags-1.0.la libags_thread-1.0.la libags_server-0.7.la libags_audio-1.0.la libags_gui-0.7.la libgsequencer-0.7.la
 EXTRA_DIST = gtk-doc.make gsequencer.share acsite.m4 gsequencer.1 \
 	midi2xml.1 README gsequencer-documentation \
-	gsequencer.desktop.in docs/reference/ags $(userdoc) \
-	$(userdocimages) $(top_srcdir)/ags/file/ags_file.dtd \
-	$(top_srcdir)/ags.xsl
+	gsequencer.desktop.in docs/reference/ags $(manpages) \
+	$(userdoc) $(userdocimages) \
+	$(top_srcdir)/ags/file/ags_file.dtd $(top_srcdir)/ags.xsl \
+	$(top_srcdir)/ags/object/ags_marshallers.list
 CLEANFILES = $(appdata_DATA)
 man1_MANS = gsequencer.1 midi2xml.1
 libags_ladir = $(datadir)
@@ -1230,6 +1236,10 @@ nobase_include_HEADERS = $(libags_1_0_la_HEADERS_0) $(libags_thread_1_0_la_HEADE
 doc_DATA = README
 
 # documentation
+manpages = \
+	gsequencer.1.xml \
+	midi2xml.1.xml
+
 userdoc = \
 	docs/usersBook.xml \
 	docs/appa.xml \
@@ -1239,6 +1249,23 @@ userdoc = \
 	docs/usersBook/chap3.xml \
 	docs/usersBook/chap4.xml \
 	docs/usersBook/preface.xml
+
+devdoc = \
+	docs/developersBook.xml \
+	docs/developersBook/preface.xml \
+	docs/developersBook/chap1.xml \
+	docs/developersBook/chap2.xml \
+	docs/developersBook/chap3.xml \
+	docs/developersBook/chap4.xml \
+	docs/developersBook/chap5.xml \
+	docs/developersBook/chap6.xml \
+	docs/developersBook/chap7.xml \
+	docs/developersBook/chap8.xml \
+	docs/developersBook/chap9.xml \
+	docs/developersBook/chap10.xml \
+	docs/developersBook/chap11.xml \
+	docs/developersBook/chap12.xml \
+	docs/developersBook/appb.xml
 
 userdocimages = \
 	$(top_srcdir)/docs/images/ags_export_window.png \

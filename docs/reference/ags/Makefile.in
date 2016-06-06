@@ -512,7 +512,7 @@ SCANGOBJ_OPTIONS =
 
 # Extra options to supply to gtkdoc-scan.
 # e.g. SCAN_OPTIONS=--deprecated-guards="GTK_DISABLE_DEPRECATED"
-SCAN_OPTIONS = 
+SCAN_OPTIONS = --rebuild-types --rebuild-sections 
 
 # Extra options to supply to gtkdoc-mkdb
 # e.g. MKDB_OPTIONS=--xml-mode --output-format=xml
@@ -1220,7 +1220,7 @@ dist-hook: dist-check-gtkdoc all-gtk-doc dist-hook-local
 
 .PHONY : dist-hook-local docs
 
--include $(top_srcdir)/git.mk
+-include git.mk
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
