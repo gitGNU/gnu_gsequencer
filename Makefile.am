@@ -103,7 +103,7 @@ userdocimages = \
 
 EXTRA_DIST += $(manpages) $(userdoc) $(userdocimages)
 
-EXTRA_DIST += (top_srcdir)/ags/file/ags_file.dtd $(top_srcdir)/ags.xsl
+EXTRA_DIST += $(top_srcdir)/ags/file/ags_file.dtd $(top_srcdir)/ags.xsl $(top_srcdir)/ags/object/ags_marshallers.list
 
 # libraries and gsequencer
 libags_1_0_la_SOURCES = $(libags_c_sources) $(libags_util_c_sources) $(libags_object_c_sources) $(libags_file_c_sources) $(libags_file_task_c_sources)

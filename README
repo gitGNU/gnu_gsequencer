@@ -54,6 +54,10 @@ As well the desktop file:
 
 * gsequencer.desktop.in
 
+And so for the glib-object marshallers file:
+
+* ags/object/ags_marshallers.list
+
 Third-party files with uncertain copyright provided by gtk-doc:
 
 * docs/reference/ags/Makefile.am
@@ -77,3 +81,8 @@ Third-party files with uncertain copyright provided by autotools:
 * Makefile.in
 * missing
 * test-driver
+
+Generated files with uncertain copyright done with glib-genmarshal
+
+ags/object/ags_marshal.c
+ags/object/ags_marshal.h
