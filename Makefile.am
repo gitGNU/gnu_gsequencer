@@ -1,3 +1,8 @@
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
 AUTOMAKE_OPTIONS = foreign
 # SUBDIRS = . docs/reference/ags
 
@@ -45,6 +50,10 @@ docdir = $(datadir)/docs/gsequencer
 doc_DATA = README
 
 # documentation
+manpages = \
+	gsequencer.1.xml \
+	midi2xml.1.xml
+
 userdoc = \
 	docs/usersBook.xml \
 	docs/appa.xml \
@@ -54,6 +63,23 @@ userdoc = \
 	docs/usersBook/chap3.xml \
 	docs/usersBook/chap4.xml \
 	docs/usersBook/preface.xml
+
+devdoc = \
+	docs/developersBook.xml \
+	docs/developersBook/preface.xml \
+	docs/developersBook/chap1.xml \
+	docs/developersBook/chap2.xml \
+	docs/developersBook/chap3.xml \
+	docs/developersBook/chap4.xml \
+	docs/developersBook/chap5.xml \
+	docs/developersBook/chap6.xml \
+	docs/developersBook/chap7.xml \
+	docs/developersBook/chap8.xml \
+	docs/developersBook/chap9.xml \
+	docs/developersBook/chap10.xml \
+	docs/developersBook/chap11.xml \
+	docs/developersBook/chap12.xml \
+	docs/developersBook/appb.xml
 
 userdocimages = \
 	$(top_srcdir)/docs/images/ags_export_window.png \
@@ -75,9 +101,9 @@ userdocimages = \
 	$(top_srcdir)/docs/images/ags_performance_preferences.png \
 	$(top_srcdir)/docs/images/ags_server_preferences.png
 
-EXTRA_DIST += $(userdoc) $(userdocimages)
+EXTRA_DIST += $(manpages) $(userdoc) $(userdocimages)
 
-EXTRA_DIST += $(top_srcdir)/ags/file/ags_file.dtd $(top_srcdir)/ags.xsl
+EXTRA_DIST += (top_srcdir)/ags/file/ags_file.dtd $(top_srcdir)/ags.xsl
 
 # libraries and gsequencer
 libags_1_0_la_SOURCES = $(libags_c_sources) $(libags_util_c_sources) $(libags_object_c_sources) $(libags_file_c_sources) $(libags_file_task_c_sources)
